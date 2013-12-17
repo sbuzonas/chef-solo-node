@@ -1,23 +1,16 @@
 chef-solo-node Cookbook
 =======================
-TODO: Enter the cookbook description here.
-
-e.g.
-This cookbook makes your favorite breakfast sandwich.
+This cookbook is intended to persist node information in the `node` data bag for `chef-solo`
 
 Requirements
 ------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
 
-e.g.
 #### packages
-- `toaster` - chef-solo-node needs toaster to brown your bagel.
+- `ohai` - chef-solo-node uses ohai to adjust your primary ip address when using `vagrant` and `virtualbox`.
 
 Attributes
 ----------
-TODO: List you cookbook attributes here.
 
-e.g.
 #### chef-solo-node::default
 <table>
   <tr>
@@ -27,19 +20,17 @@ e.g.
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['chef-solo-node']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
+    <td><tt>['ohai']['plugins']['chef-solo-node']</tt></td>
+    <td>String</td>
+    <td>path to <tt>ohai</tt> plugin directory</td>
+    <td><tt>plugins</tt></td>
   </tr>
 </table>
 
 Usage
 -----
 #### chef-solo-node::default
-TODO: Write usage instructions for each cookbook.
 
-e.g.
 Just include `chef-solo-node` in your node's `run_list`:
 
 ```json
@@ -51,11 +42,11 @@ Just include `chef-solo-node` in your node's `run_list`:
 }
 ```
 
+For best results add it near the end of the run list to persist any settings modified by recipies.
+
 Contributing
 ------------
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
 
-e.g.
 1. Fork the repository on Github
 2. Create a named feature branch (like `add_component_x`)
 3. Write your change
@@ -65,4 +56,4 @@ e.g.
 
 License and Authors
 -------------------
-Authors: TODO: List authors
+Authors: @slbmeh

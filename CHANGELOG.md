@@ -5,7 +5,7 @@ This file is used to list changes made in each version of the chef-solo-node coo
 
 0.1.0
 -----
-- [your_name] - Initial release of chef-solo-node
+- [@slbmeh] - Initial release of chef-solo-node
 
 - - -
 Check the [Markdown Syntax Guide](http://daringfireball.net/projects/markdown/syntax) for help with Markdown.
