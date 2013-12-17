@@ -56,4 +56,4 @@ Contributing
 
 License and Authors
 -------------------
-Authors: @slbmeh
+Authors: Steve Buzonas
