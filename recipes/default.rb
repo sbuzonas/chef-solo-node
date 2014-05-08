@@ -17,10 +17,4 @@
 # limitations under the License.
 #
 
-require 'rubygems'
-require 'ohai'
-
-ohai = Ohai::System.new()
-ohai.require_plugin('ipoverride')
-
 node_set node[:hostname]
